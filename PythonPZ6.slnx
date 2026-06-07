@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Элементы решения/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="PythonPZ6/PythonPZ6.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="d35696c2-a77a-4fd1-b05c-bfe2fdd6358b">
+    <Build Project="false" />
+  </Project>
+</Solution>

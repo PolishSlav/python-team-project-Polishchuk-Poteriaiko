@@ -1,0 +1,7 @@
+Total records: 6
+Errors found: 2
+Warnings found: 0
+
+Errors details:
+[2026-06-04 10:12:05] ERROR: Database connection timeout.
+[2026-06-04 14:05:22] ERROR: Failed to authenticate user 'admin'.
