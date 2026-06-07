@@ -21,4 +21,9 @@ def generate_report(total, errors, warnings):
         for err in errors:
             report += f" > {err}\n"
 
+    if warnings:
+        report += "\nWarnings Details\n"
+        for war in warnings:
+            report += f" > {war}\n"
+
     return report
