@@ -1,18 +1,24 @@
 def analyze_logs(logs):
+    if not logs:
+        return 0, [], []
+
     total_records = len(logs)
-    errors = [log for log in logs if "ERROR" in log]
-    warnings = [log for log in logs if "WARNING" in log]
+
+    errors = [log.strip() for log in logs if "[ERROR]" in log.upper()]
+    warnings = [log.strip() for log in logs if "[WARNING]" in log.upper()]
+
     return total_records, errors, warnings
 
+
 def generate_report(total, errors, warnings):
-    report = f"Total records: {total}\n"
-    report += f"Errors found: {len(errors)}\n"
-    report += f"Warnings found: {len(warnings)}\n"
-    
+    report = "ANALYZER REPORT\n"
+    report += f"Total records processed: {total}\n"
+    report += f"Critical errors found (ERROR): {len(errors)}\n"
+    report += f"Warnings found (WARNING): {len(warnings)}\n"
+
     if errors:
-        report += "\nErrors details:\n" + "\n".join(errors)
-        
+        report += "\nError Details\n"
+        for err in errors:
+            report += f" > {err}\n"
+
     return report
-
-
-
