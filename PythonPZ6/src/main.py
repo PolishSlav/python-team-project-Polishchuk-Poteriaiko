@@ -9,7 +9,7 @@ def read_logs(filepath):
         return [line.strip() for line in f.readlines() if line.strip()]
 
 def main():
-    filepath = "data/server.log"
+    filepath = "../Data/server.log"
     logs = read_logs(filepath)
     
     if not logs:
@@ -21,7 +21,7 @@ def main():
     
     print(report)
     
-    with open("data/report.txt", "w", encoding="utf-8") as f:
+    with open("../Data/report.txt", "w", encoding="utf-8") as f:
         f.write(report)
 
 if __name__ == "__main__":
